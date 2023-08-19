@@ -31,12 +31,20 @@ Keys that exist in .env but not in .env.sample: env, env2, env3
 ```
 
 
-## Deno Program
+## codes
 
 ```ts
 import { parse } from "https://raw.githubusercontent.com/ppdx999/deno-env-parser/main/mod.ts";
 import {diff, mkMsg} from  "https://raw.githubusercontent.com/ppdx999/deno-env-diff/main/mod.ts"
 
+/* if you use node.
+
+run `npm i env-files-parser env-files-diff` and import like below
+
+import { parse } from "env-files-parser";
+import {diff, mkMsg} from  "env-files-diff"
+
+*/
 
 const env = await Deno.readTextFile('.env');
 const sample = await Deno.readTextFile('.env.sample');
@@ -54,7 +62,3 @@ if (msg) {
   console.log(msg);
 }
 ```
-
-## Node
-
-WIP
