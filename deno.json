@@ -1,0 +1,6 @@
+{
+  "tasks": {
+    "check": "deno check **/*.ts",
+    "ok": "deno fmt --check && deno lint && deno task check && deno test"
+  }
+}
